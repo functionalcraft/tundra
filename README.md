@@ -1,2 +1,6 @@
-# tundra
-Dark blueish grey colour scheme
+# Tundra
+
+Tundra is a dark blueish grey color scheme, drawing inspiration primarily from
+Solarized and Nord.
+
+
