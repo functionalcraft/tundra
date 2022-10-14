@@ -18,7 +18,7 @@ base05 = "#14222f"  # Lch halfway between base0 and base1
 # Lch gradients between 4 picked values in RGB color wheel
 # RYB wheel could be an improvement
 # Red - Verimilion - Orange - Amber - Yellow - Chartreuse - Green - Teal - Blue - Violet - Purple - Magenta
-# The picked yellow is closer to amber, so best to pick new yellow
+# The picked yellow is closer to amber, so best to pick new yellow, e.g. Lch 87, 52, 93
 red          = "#c15642"    # L 50 c 53 h 38    Picked
 orange       = "#d78348"    # L 63 c 52 h 59
 yellow       = "#e5b059"    # L 75 c 52 h 79    Picked
