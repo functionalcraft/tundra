@@ -1,0 +1,86 @@
+title = "Tundra color palette"
+
+[winter-base]
+base0 = "#081723"   # Picked
+base1 = "#202e3c"
+base2 = "#374757"
+base3 = "#506274"
+base4 = "#6a7e93"   # Picked
+base5 = "#929aa3"
+base6 = "#b9b7b2"
+base7 = "#e1d5c2"   # Picked
+
+base8 = "#f0eae1"   # Picked
+
+base05 = "#14222f"  # Lch halfway between base0 and base1
+
+[winter-accents]
+# Lch gradients between 4 picked values in RGB color wheel
+# RYB wheel could be an improvement
+# Red - Verimilion - Orange - Amber - Yellow - Chartreuse - Green - Teal - Blue - Violet - Purple - Magenta
+# The picked yellow is closer to amber, so best to pick new yellow
+red          = "#c15642"    # L 50 c 53 h 38    Picked
+orange       = "#d78348"    # L 63 c 52 h 59
+yellow       = "#e5b059"    # L 75 c 52 h 79    Picked
+chartreuse   = "#a3b057"    # L 69 c 47 h 112
+green        = "#43854d"    # L 50 c 41 h 145   Picked
+spring-green = "#068672"    # L 50 c 36 h 176   Poor contrast
+cyan         = "#0e848c"    # L 50 c 29 h 207   
+azure        = "#0f81a3"    # L 50 c 31 h 238   Poor contrast
+blue         = "#3e7bb6"    # L 50 c 37 h 269   Picked
+violet       = "#7b6eb3"    # L 50 c 41 h 301
+magenta      = "#a95c9a"    # L 50 c 45 h 333
+rose         = "#c25071"    # L 50 c 49 h 5     Poor contrast
+
+# Lights: L 36% towards 100
+light-red          = "#f9856d"  # L 68 c 53 h 38
+light-orange       = "#f9a974"  # L 76 c 52 h 59
+light-yellow       = "#fcc97c"  # L 84 c 51 h 79    (clipped c from 52)
+light-chartreuse   = "#c2ce73"  # L 80 c 47 h 112
+light-green        = "#72b57a"  # L 68 c 41 h 145
+light-spring-green = "#4eb7a0"  # L 68 c 36 h 176
+light-cyan         = "#52b4bd"  # L 68 c 29 h 207
+light-azure        = "#56b0d4"  # L 68 c 31 h 238
+light-blue         = "#73a9e8"  # L 68 c 37 h 269
+light-violet       = "#ab9ce5"  # L 68 c 41 h 301
+light-magenta      = "#dc8bcb"  # L 68 c 45 h 333
+light-rose         = "#f880a0"  # L 68 c 49 h 5
+
+# Darks: L-20%, c-10%
+dark-red          = "#9e4130"  # L 40 c 48 h 38
+dark-orange       = "#ac6532"  # L 50 c 47 h 59
+dark-yellow       = "#b6893d"  # L 60 c 47 h 79
+dark-chartreuse   = "#7f8a3d"  # L 55 c 42 h 112
+dark-green        = "#306a3a"  # L 40 c 37 h 145
+dark-spring-green = "#096b5a"  # L 40 c 30 h 176  (clipped c from 32)
+dark-cyan         = "#036970"  # L 40 c 25 h 207  (clipped c from 26)
+dark-azure        = "#006783"  # L 40 c 27 h 238 (clipped c from 28)
+dark-blue         = "#236297"  # L 40 c 33 h 269
+dark-violet       = "#615692"  # L 40 c 37 h 301
+dark-magenta      = "#8a467d"  # L 40 c 41 h 333
+dark-rose         = "#9f3c5a"  # L 40 c 44 h 5
+
+# Faded darks
+
+dark-faded-yellow       = "#816b4d"  # Halfway between yellow and base1 in Lab
+dark-faded-orange       = "#7c5644"  # Halfway between orange and base1 in Lab
+dark-faded-green        = "#335746"  # ...
+dark-faded-red          = "#724340"
+dark-faded-rose         = "#714156"
+dark-faded-magenta      = "#634569"
+dark-faded-violet       = "#4c4d75"
+dark-faded-blue         = "#305276"
+dark-faded-chartreuse   = "#626b4c"
+dark-faded-azure        = "#23566d"
+dark-faded-cyan         = "#225763"
+dark-faded-spring-green = "#215856"
+
+[autumn-base]
+base0 = #1b140e
+base1 = #322b25
+base2 = #4b453c
+base3 = #666055
+base4 = #827c6f
+base5 = #9f9a8a
+base6 = #bdb8a6
+base7 = #dcd8c3
