@@ -1,0 +1,3 @@
+[submodule "tundra-xfce-terminal"]
+	path = tundra-xfce-terminal
+	url = git@github.com:nivalis-labs/tundra-xfce-terminal.git
