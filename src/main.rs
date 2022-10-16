@@ -212,37 +212,37 @@ fn main() {
         .collect();
 
     svg::save(
-        "accents.svg",
+        "palette.svg",
         &svg_palette(&base_gradient, 1, &dark_accents, &accents, &light_accents),
     )
     .unwrap();
     svg::save(
-        "accents_light.svg",
+        "palette_light.svg",
         &svg_palette(&base_gradient, 7, &dark_accents, &accents, &light_accents),
     )
     .unwrap();
-    svg::save(
-        "accents_earth.svg",
-        &svg_palette(
-            &earth_base_gradient,
-            2,
-            &dark_accents,
-            &accents,
-            &light_accents,
-        ),
-    )
-    .unwrap();
-    svg::save(
-        "accents_earth_light.svg",
-        &svg_palette(
-            &earth_base_gradient,
-            7,
-            &dark_accents,
-            &accents,
-            &light_accents,
-        ),
-    )
-    .unwrap();
+    // svg::save(
+    //     "accents_earth.svg",
+    //     &svg_palette(
+    //         &earth_base_gradient,
+    //         2,
+    //         &dark_accents,
+    //         &accents,
+    //         &light_accents,
+    //     ),
+    // )
+    // .unwrap();
+    // svg::save(
+    //     "accents_earth_light.svg",
+    //     &svg_palette(
+    //         &earth_base_gradient,
+    //         7,
+    //         &dark_accents,
+    //         &accents,
+    //         &light_accents,
+    //     ),
+    // )
+    // .unwrap();
 
     let mut file = std::fs::OpenOptions::new()
         .write(true)
