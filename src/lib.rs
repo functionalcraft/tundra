@@ -169,7 +169,7 @@ pub fn run() -> Result<(), Box<dyn Error>> {
 
     let accent_names: [&str; 12] = [
         "red",
-        "vermillion",
+        "vermilion",
         "orange",
         "amber",
         "yellow",
