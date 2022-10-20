@@ -21,7 +21,6 @@ The colour schemes primarily use the medium shades.
 
 The project is currently a work in progress. The initial version of the palette
 is ready, but minor adjustments are still to be expected. Colour presets for
-Xfce Terminal are just around the corner, and will be followed by colour
-schemes for vim and neovim. These will serve as references for other editor and
-IDE themes.
+Xfce Terminal are available and work on schemes for vim and neovim is in
+progress. These will serve as references for other editor and IDE themes.
 
