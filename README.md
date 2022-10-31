@@ -7,12 +7,12 @@ fantastic palettes [Solarized](https://ethanschoonover.com/solarized) and
 yellowish orange base gradient with slightly muted accents and has the goal of
 being relaxing for the eyes as well as the mind.
 
-The accents form a 12-colour RYB colour wheel derived from CIE L*c*h° gradients
-between a small number of hand-picked colours (red, yellow, green and blue, to
-be specific). Each accent colour also has a light and a dark variant, derived
-from specific lightness and chroma relations. All in all, this makes for a
-whopping 36 accent colours, not all of which should be used at the same time.
-The colour schemes primarily use the medium shades.
+The accents form a 12-colour wheel derived from CIE L*c*h° gradients between a
+small number of hand-picked colours (red, yellow, green and blue, to be
+specific). Each accent colour also has a light and a dark variant, derived from
+specific lightness and chroma relations. All in all, this makes for a whopping
+36 accent colours. The idea is not for all of them te be used at the same
+time, but to provide a pleasant and interesting basis.
 
 ![Tundra Color Palette - Dark](palette.svg)
 ![Tundra Color Palette - Light](palette_light.svg)

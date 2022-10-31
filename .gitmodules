@@ -1,3 +1,6 @@
 [submodule "tundra-xfce-terminal"]
 	path = tundra-xfce-terminal
 	url = git@github.com:nivalis-labs/tundra-xfce-terminal.git
+[submodule "tundra-vim"]
+	path = tundra-vim
+	url = git@github.com:nivalis-labs/tundra-vim.git

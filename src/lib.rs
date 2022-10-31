@@ -152,9 +152,9 @@ pub fn run() -> Result<(), Box<dyn Error>> {
     let base_7 = Lch::new(85.752, 10.91, 84.825);
     let base_8 = Lch::new(92.93, 5.094, 84.625);
 
-    let red = Lch::new(50.0, 53.0, 38.0);
-    let yellow = Lch::new(88.0, 58.0, 93.0);
-    let green = Lch::new(53.0, 44.0, 145.0);
+    let red = Lch::new(50.0, 53.0, 33.0);
+    let yellow = Lch::new(75.0, 52.0, 79.0);
+    let green = Lch::new(53.0, 44.0, 147.0);
     let blue = Lch::new(50.0, 37.0, 269.0);
 
     let base_gradient: Vec<Lch> = Gradient::from([
@@ -171,21 +171,21 @@ pub fn run() -> Result<(), Box<dyn Error>> {
         "red",
         "vermilion",
         "orange",
-        "amber",
         "yellow",
-        "chartreuse",
+        "olive",
+        "moss-green",
         "green",
         "teal",
+        "azure",
         "blue",
         "violet",
         "purple",
-        "magenta",
     ];
     let accents: Vec<Lch> = Gradient::from([
         (0.0, red),
-        (4.0 / 12.0, yellow),
-        (6.0 / 12.0, green),
-        (8.0 / 12.0, blue),
+        (0.25, yellow),
+        (0.5, green),
+        (0.75, blue),
         (1.0, red),
     ])
     .take(13)
