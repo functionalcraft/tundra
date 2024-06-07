@@ -1,4 +1,5 @@
-use palette::{FromColor, Gradient, Lab, Lch, Pixel, Saturate, Shade, Srgb};
+use enterpolation::{linear::Linear, Curve, Merge};
+use palette::{Darken, Desaturate, FromColor, Lab, Lch, Lighten, Srgb, Mix};
 use std::error::Error;
 use std::f64::consts::{FRAC_PI_2, PI};
 use std::io::Write;
@@ -6,8 +7,17 @@ use svg::node::element::path::Data;
 use svg::node::element::{Path, Rectangle};
 use svg::Document;
 
+#[derive(Clone, Copy, Debug)]
+struct Adapter<T>(T);
+
+impl<T: Mix> Merge<T::Scalar> for Adapter<T> {
+    fn merge(self, to: Self, factor: T::Scalar) -> Self {
+        Adapter(self.0.mix(to.0, factor))
+    }
+}
+
 fn hex_string(color: &Lch) -> String {
-    let bytes: [u8; 3] = Srgb::from_color(color.clone()).into_format().into_raw();
+    let bytes: [u8; 3] = Srgb::from_color(color.clone()).into_format().into();
 
     format!("#{:02x?}{:02x?}{:02x?}", bytes[0], bytes[1], bytes[2])
 }
@@ -157,15 +167,14 @@ pub fn run() -> Result<(), Box<dyn Error>> {
     let green = Lch::new(53.0, 44.0, 145.0);
     let blue = Lch::new(50.0, 37.0, 269.0);
 
-    let base_gradient: Vec<Lch> = Gradient::from([
-        (0.0, Lab::from_color(base_0)),
-        (0.5, Lab::from_color(base_4)),
-        (0.875, Lab::from_color(base_7)),
-        (1.0, Lab::from_color(base_8)),
-    ])
-    .take(9)
-    .map(|c| Lch::from_color(c))
-    .collect();
+    let base_gradient: Vec<Lch> = Linear::builder()
+        .elements([Lab::from_color(base_0), Lab::from_color(base_4), Lab::from_color(base_7), Lab::from_color(base_8)])
+        .knots([0.0, 0.5, 0.875, 1.0])
+        .build()
+        .expect("failed to build base gradient")
+        .take(9)
+        .map(|c| Lch::from_color(c))
+        .collect();
 
     let accent_names: [&str; 12] = [
         "red",
@@ -181,16 +190,15 @@ pub fn run() -> Result<(), Box<dyn Error>> {
         "purple",
         "magenta",
     ];
-    let accents: Vec<Lch> = Gradient::from([
-        (0.0, red),
-        (4.0 / 12.0, yellow),
-        (6.0 / 12.0, green),
-        (8.0 / 12.0, blue),
-        (1.0, red),
-    ])
-    .take(13)
-    .take(12)
-    .collect();
+    let accents: Vec<Lch> = Linear::builder()
+        .elements([Adapter(red), Adapter(yellow), Adapter(green), Adapter(blue), Adapter(red)])
+        .knots([0.0, 4.0/12.0, 6.0/12.0, 8.0/12.0, 1.0])
+        .build()
+        .expect("Failed to build accents gradient")
+        .take(13)
+        .take(12)
+        .map(|x| x.0)
+        .collect();
 
     let light_accents: Vec<Lch> = accents
         .clone()
