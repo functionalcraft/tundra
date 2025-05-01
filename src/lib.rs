@@ -157,8 +157,11 @@ fn toml_document(
 }
 
 pub fn run() -> Result<(), Box<dyn Error>> {
-    let base_0 = Lch::new(7.097, 10.318, 261.561);
-    let base_4 = Lch::new(51.941, 13.891, 260.896);
+    // Lch from HEX colors can be checked with e.g. www.colorhexa.com/ffaaaa
+    let base_0 = Lch::new(3.901, 8.646, 275.318);
+    let base_1 = Lch::new(10.533, 12.257, 273.877); // wanted - adjust base0 and base4 accordingly
+    let base_4 = Lch::new(50.061, 23.09, 269.553);
+    // let base_7 = Lch::new(82.046, 8.118, 84.835);
     let base_7 = Lch::new(85.752, 10.91, 84.825);
     let base_8 = Lch::new(92.93, 5.094, 84.625);
 
@@ -168,8 +171,14 @@ pub fn run() -> Result<(), Box<dyn Error>> {
     let blue = Lch::new(50.0, 37.0, 269.0);
 
     let base_gradient: Vec<Lch> = Linear::builder()
-        .elements([Lab::from_color(base_0), Lab::from_color(base_4), Lab::from_color(base_7), Lab::from_color(base_8)])
-        .knots([0.0, 0.5, 0.875, 1.0])
+        .elements([
+            Lab::from_color(base_0),
+            Lab::from_color(base_1),
+            Lab::from_color(base_4),
+            Lab::from_color(base_7),
+            Lab::from_color(base_8),
+        ])
+        .knots([0.0, 0.125, 0.5, 0.875, 1.0]) // Each step is 1/8
         .build()
         .expect("failed to build base gradient")
         .take(9)

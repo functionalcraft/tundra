@@ -1,11 +1,11 @@
-<svg style="background:#1f2e3c" viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#081723" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="10"/>
-<rect fill="#1f2e3c" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="21.11111111111111"/>
-<rect fill="#374758" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="32.22222222222222"/>
-<rect fill="#506275" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="43.33333333333333"/>
-<rect fill="#6a7e93" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="54.44444444444444"/>
-<rect fill="#929aa3" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="65.55555555555556"/>
-<rect fill="#b9b7b2" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="76.66666666666666"/>
+<svg style="background:#121d2d" viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#060e1b" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="10"/>
+<rect fill="#121d2d" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="21.11111111111111"/>
+<rect fill="#293950" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="32.22222222222222"/>
+<rect fill="#425876" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="43.33333333333333"/>
+<rect fill="#5d799e" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="54.44444444444444"/>
+<rect fill="#8b96aa" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="65.55555555555556"/>
+<rect fill="#b6b5b6" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="76.66666666666666"/>
 <rect fill="#e1d5c2" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="87.77777777777777"/>
 <rect fill="#f0eae1" height="11.11111111111111" stroke="none" stroke-width="0" width="20" x="10" y="98.88888888888889"/>
 <path d="M77.05905,11.703709 A50,50,0,0,1,102.94095,11.703709 L100.35276,21.362967 A40,40,0,0,0,79.64724,21.362967 L77.05905,11.703709 z" fill="#842f21" stroke="none" stroke-width="0"/>

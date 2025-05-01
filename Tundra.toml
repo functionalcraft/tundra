@@ -1,13 +1,13 @@
 title = "Tundra color palette"
 
 [base]
-base-0 = "#081723"
-base-1 = "#1f2e3c"
-base-2 = "#374758"
-base-3 = "#506275"
-base-4 = "#6a7e93"
-base-5 = "#929aa3"
-base-6 = "#b9b7b2"
+base-0 = "#060e1b"
+base-1 = "#121d2d"
+base-2 = "#293950"
+base-3 = "#425876"
+base-4 = "#5d799e"
+base-5 = "#8b96aa"
+base-6 = "#b6b5b6"
 base-7 = "#e1d5c2"
 base-8 = "#f0eae1"
 
