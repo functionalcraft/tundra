@@ -162,13 +162,19 @@ pub fn run() -> Result<(), Box<dyn Error>> {
     let base_1 = Lch::new(10.533, 12.257, 273.877); // wanted - adjust base0 and base4 accordingly
     let base_4 = Lch::new(50.061, 23.09, 269.553);
     // let base_7 = Lch::new(82.046, 8.118, 84.835);
-    let base_7 = Lch::new(85.752, 10.91, 84.825);
+    let base_7 = Lch::new(82.056, 6.497, 96.341);
     let base_8 = Lch::new(92.93, 5.094, 84.625);
 
-    let red = Lch::new(50.0, 53.0, 38.0);
-    let yellow = Lch::new(88.0, 58.0, 93.0);
-    let green = Lch::new(53.0, 44.0, 145.0);
-    let blue = Lch::new(50.0, 37.0, 269.0);
+    // tundra v2: let red = Lch::new(50.0, 53.0, 38.0);
+    // arctice raspberry: let red = Lch::new(30.352, 53.0, 38.0);
+    // let red = Lch::new(40.0, 51.377, 34.8);
+    let red = Lch::new(50.332, 76.37, 17.112);
+    //let yellow = Lch::new(88.0, 58.0, 93.0);
+    let yellow = Lch::new(82.833, 79.701, 85.822);
+    // let green = Lch::new(53.0, 44.0, 145.0);
+    let green = Lch::new(49.821, 52.792, 130.641);
+    // let blue = Lch::new(50.0, 37.0, 269.0);
+    let blue = Lch::new(49.032, 83.663, 296.192);
 
     let base_gradient: Vec<Lch> = Linear::builder()
         .elements([
@@ -200,7 +206,13 @@ pub fn run() -> Result<(), Box<dyn Error>> {
         "magenta",
     ];
     let accents: Vec<Lch> = Linear::builder()
-        .elements([Adapter(red), Adapter(yellow), Adapter(green), Adapter(blue), Adapter(red)])
+        .elements([
+            Adapter(red),
+            Adapter(yellow),
+            Adapter(green),
+            Adapter(blue),
+            Adapter(red),
+        ])
         .knots([0.0, 4.0/12.0, 6.0/12.0, 8.0/12.0, 1.0])
         .build()
         .expect("Failed to build accents gradient")
